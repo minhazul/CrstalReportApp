@@ -170,6 +170,12 @@
     <Compile Include="Models\Category.cs">
       <DependentUpon>ModelMyDemo.tt</DependentUpon>
     </Compile>
+    <Compile Include="Reports\CrystalReportProductGrouping.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportProductGrouping.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Models\ModelMyDemo.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -199,6 +205,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetProduct.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DataSetProductGrouping.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetProductGrouping.xsd</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -238,6 +249,17 @@
     </None>
     <Content Include="Reports\DataSetProduct.xss">
       <DependentUpon>DataSetProduct.xsd</DependentUpon>
+    </Content>
+    <Content Include="Reports\DataSetProductGrouping.xsc">
+      <DependentUpon>DataSetProductGrouping.xsd</DependentUpon>
+    </Content>
+    <None Include="Reports\DataSetProductGrouping.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetProductGrouping.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Reports\DataSetProductGrouping.xss">
+      <DependentUpon>DataSetProductGrouping.xsd</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -279,6 +301,10 @@
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Reports\CrystalReportProductGrouping.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportProductGrouping.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\CrystalReportProduct.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReportProduct.cs</LastGenOutput>
